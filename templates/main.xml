@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ip_list>
+    <visitor>
+        <ip>{{visitor_ip}}</ip>
+    </visitor>
+</ip_list>

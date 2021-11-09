@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pcss-zad-rek-jf-deployment
+  labels:
+    app: pcss-zad-rek-jf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pcss-zad-rek-jf
+  template:
+    metadata:
+      labels:
+        app: pcss-zad-rek-jf
+    spec:
+      containers:
+      - name: pcss-zad-rek-jf
+        image: pcss-zad-rek-jf
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+        livenessProbe:
+            exec:
+              command:
+                - wget 
+                - '--header=Accept: text/html'
+                - http://localhost/
+                - -O
+                - /dev/null
+            initialDelaySeconds: 5
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pcss-zad-rek-jf-service
+spec:
+  selector:
+    app: pcss-zad-rek-jf
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,2 @@
+{% for item in data|reverse %}{{item[1]}},{{item[0]|ctime}}
+{% endfor %}

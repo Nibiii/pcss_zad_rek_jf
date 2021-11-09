@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ip_list>
+{% for item in data|reverse %}
+<visitor>
+    <ip>{{item[1]}}</ip>
+    <time>{{item[0]|ctime}}</time>
+</visitor>
+{% endfor %}
+</ip_list>

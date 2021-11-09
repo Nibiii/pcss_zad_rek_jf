@@ -1,0 +1,6 @@
+---
+ip_list:{% for item in data|reverse %}
+  -visitor:
+    ip:{{item[1]}}
+    time:{{item[0]|ctime}}{% endfor %}
+...

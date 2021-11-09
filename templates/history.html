@@ -1,0 +1,21 @@
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    th, td, tr{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <th>IP</th>
+    <th>Visit Time</th>
+    {% for item in data|reverse %}
+        <tr><td> {{item[1]}} </td><td> {{item[0]|ctime}} </td></tr>
+    {% endfor %}
+</table>
+</br>
+<p style="text-align: right;"><a href="../">Back to main site</a></p>
