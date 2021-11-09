@@ -53,7 +53,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-*To check your IP address go to http://*server_ip_address/ 
+*To check your IP address go to http://*server_ip_address/ </br></br>
 *To see list of all registered addresses go to http://*server_ip_address/history
 
 
