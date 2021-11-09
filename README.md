@@ -52,7 +52,7 @@ To get a local copy up and running follow these simple example steps.
 
 
 ### Usage
-
+* App uses port 80 so remeber to check if there is no app already listening on this port!
 * To check your IP address go to http://*server_ip_address*/ </br>
 * To see list of all registered addresses go to http://*server_ip_address*/history
 
