@@ -6,16 +6,12 @@ The app is supposed to be written in Python and run as a Docker container. Error
 Docker image contains Python-alpine image which is only ~40MB. The app also contains Kubernetes YAML file which allows for app and service deployment, and also monitoring app's health and restarting it when it returns HTTP error code.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
 * [Python](https://www.python.org/)
 * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -42,17 +38,27 @@ To get a local copy up and running follow these simple example steps.
 2. Navigate to a directory containing downloaded repository
 3. Create Docker image out of the repository
 	```sh
-	docker build -t *image-name-here* .
+	docker build -t pcss-zad-rek-jf .
 	```
+	
+	Very important to name the image exactly like in the example above!!! If You won't name the image like that, You will need to change the image name in .yaml file needed for Kubernetes deployment!
+	
 4. Deploy app in Kubernetes
    ```sh
    kubectl apply -f api-k8.yaml
    ```
 5. The app is running! YEY!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### 
+
+*To check your IP address go to http://*server_ip_address/ 
+*To see list of all registered addresses go to http://*server_ip_address/history
+
+
 
 ### TO DO(?)
 
-* The app won't return external client's IP address (ex. from another computer in LAN) 
+* The app won't return external client's IP address (from outside of the Kubernetes LAN) 
 	but I'm unsure if it's even possible with the way Kubernetes and Docker proxy their requests.
