@@ -3,7 +3,7 @@
 The app is my recruitment assignment for junior DevOps position at PCSS. It is supposed to return IP of the requesting client. 
 It should return content type based on HTTP request header (not sure i understood correctly) and also return a full list of returned IP addresses.
 The app is supposed to be written in Python and run as a Docker container. Errors are handled by Flask, request frequency as well. 
-Docker image contains Python-alpine image which is only ~40mbs. The app also contains Kubernetes YAML file which allows for app and service deployment, and also monitoring app's health and restarting it when it returns HTTP error code.
+Docker image contains Python-alpine image which is only ~40MB. The app also contains Kubernetes YAML file which allows for app and service deployment, and also monitoring app's health and restarting it when it returns HTTP error code.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
