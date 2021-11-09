@@ -27,10 +27,14 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 
-* Docker</br>
+* Docker
+	```
 	Go to https://docs.docker.com/get-docker/, choose suitable version and install it.
-* kubectl</br>
+	```
+* kubectl
+	```
 	Go to https://kubernetes.io/docs/tasks/tools/, click link corresponding to your os version and follow the instructions/
+	```
 	
 ### Installation
 
